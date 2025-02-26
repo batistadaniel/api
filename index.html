@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Teste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>API Teste</h1>
+
+    <div class="login" id="loginSection">
+        <form class="loginForm" id="loginForm">
+            <h2>Login</h2>
+
+            <div class="separator">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" required>
+            </div>
+            
+            <div class="separator">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <button type="submit">Login</button>
+            <p>Não tem uma conta? <a href="#" id="goToCadastro">Cadastre-se</a></p>
+        </form>
+    </div>
+
+    <div class="cadastro hidden" id="cadastroSection">
+        <form id="cadastroForm">
+            <h2>Cadastro</h2>
+
+            <div class="separator">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+
+            <div class="separator">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="separator">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" required>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+            <p>Já tem uma conta? <a href="#" id="goToLogin">Faça Login</a></p>
+        </form>
+    </div>
+
+    <script>
+        // pega os elementos usando o id do html
+        const goToCadastro = document.getElementById("goToCadastro");
+        const goToLogin = document.getElementById("goToLogin");
+        const loginSection = document.getElementById("loginSection");
+        const cadastroSection = document.getElementById("cadastroSection");
+
+        // quando clica no link de fazercadastro substitui o formulario
+        goToCadastro.addEventListener("click", function(event) {
+            event.preventDefault(); // impede o comportamento padrao do link (nao recarrega a pagina)
+
+            // adiciona a classe 'hidden' escondendo o elemento
+            loginSection.classList.add("hidden");
+
+            // remove a classe 'hidden' mostrando o elemento
+            cadastroSection.classList.remove("hidden");
+        });
+
+        // quando clica no link de fazer login substitui o formulario
+        goToLogin.addEventListener("click", function(event) {
+            event.preventDefault(); // impede o comportamento padrao do link (nao recarrega a pagina)
+
+            // adiciona a classe 'hidden' escondendo o elemento
+            cadastroSection.classList.add("hidden");
+
+            // remove a classe 'hidden' mostrando o elemento
+            loginSection.classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>

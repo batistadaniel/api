@@ -1,0 +1,95 @@
+/* configuracoes globais da pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* configuracoes de body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* configuracoes de titulo da pagina */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* separador dos formularios (famosa gambiarrinha)*/
+.separator {
+    display: flex;
+    flex-direction: column;
+}
+
+/* estilos dos forms de login e cadastro */
+.login, .cadastro {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    
+}
+
+/* configuracoes dos forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: 600;
+}
+
+
+/* configuracoes dos inputs */
+input[type="text"], 
+input[type="password"], 
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* estilos dos botoes  */
+button {
+    padding: 10px;
+    background: #48c1a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3cae90;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #48c1a1;
+    text-decoration: none;
+    font-weight: 600;
+}
